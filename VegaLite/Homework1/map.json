@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Corruption Perception Index (2020)",
+  "width": 800,
+  "height": 400,
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/Homework1/ne_110m.topojson",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/Homework1/CPI2020_Wrangled.csv"
+        },
+        "key": "Country",
+        "fields": ["CPI_score_2020"]
+      }
+    },
+    {"calculate": "(datum.CPI_score_2020 + 0.1)/10", "as": "CPI_score_2020"}
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "CPI_score_2020",
+      "type": "quantitative",
+      "scale": {"type": "linear"}
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "CPI_score_2020", "type": "quantitative"}
+    ]
+  }
+}
