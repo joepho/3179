@@ -95,7 +95,7 @@
         "shape": {"field": "geo", "type": "geojson"},
         "color": {
           "field": "CPI_Score",
-          "scale": {"domain": [0, 100]},
+          "scale": {"domain": [0, 100], "scheme": "redblue"}, 
           "type": "quantitative",
           "legend": {"format": ".2s"}
         },
@@ -104,7 +104,7 @@
           {
             "field": "CPI_Score",
             "type": "quantitative",
-            "title": "CPI Score for ",
+            "title": "CPI Score",
             "format": ","
           },
           {"field": "Year", "type": "quantitative", "title": "Year"}
