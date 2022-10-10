@@ -102,7 +102,7 @@
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
           {
-            "field": "CPI Score",
+            "field": "CPI_Score",
             "type": "quantitative",
             "title": "CPI Score",
             "format": ","
