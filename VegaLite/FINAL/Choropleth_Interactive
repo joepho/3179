@@ -1,0 +1,139 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Corruptions Perception Index Scores",
+  "width": "container",
+  "height": 500,
+  "params": [
+    {
+      "name": "Year_Selection",
+      "value": 2018,
+      "bind": {
+        "input": "range",
+        "min": 2012,
+        "max": 2020,
+        "step": 1,
+        "name": "Year:  "
+      }
+    },
+    {
+      "name": "zoom_level",
+      "value": 100,
+      "bind": {
+        "input": "range",
+        "min": 100,
+        "max": 1000,
+        "step": 10,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "center_to",
+      "value": [0, 0],
+      "bind": {
+        "input": "select",
+        "options": [
+          [13.1, 20.8],
+          [80.0, 30.6],
+          [133.7, -25.3],
+          [15.7, 50.5],
+          [-100, 40],
+          [-65, -20]
+        ],
+        "labels": ["Africa", "Asia", "Australia", "Europe", "North America", "South America"],
+        "name": "Map Centre: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equalEarth",
+    "center": {"expr": "center_to"},
+    "scale": {"expr": "zoom_level"}
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/Homework1/ne_110m.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/Homework2/CPI2020%20Wrangled2.csv"
+      },
+      "transform": [
+        {
+          "lookup": "Country",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/Homework1/ne_110m.topojson",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_110m_admin_0_countries"
+              }
+            },
+            "key": "properties.NAME"
+          },
+          "as": "geo"
+        },
+        {"filter": "datum.Year == Year_Selection"}
+      ],
+      "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "CPI_Score",
+          "scale": {"domain": [0, 100], "scheme": "redblue"}, 
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "CPI_Score", "type": "quantitative", "title": "CPI Score"},
+          {"field": "Year", "type": "quantitative", "title": "Year"}
+        ]
+      },
+      "layer": [
+        {"mark": {"type": "geoshape"}},
+        {
+          "transform":[
+            {
+              "window": [{"op": "rank", "as": "ranking"}],
+              "sort": [{"field": "CPI_Score", "order": "descending"}]
+            },
+            {"filter":"datum.ranking==1"},
+            {
+              "calculate": "'The highest CPI score; for this period was '+ datum['CPI_Score']",
+              "as": "text_annotation_raw"
+            },
+            {
+              "calculate": "split(datum.text_annotation_raw, ';')",
+              "as": "text_annotation"
+            }
+          ],
+          "mark": {
+                "type": "text",
+                "align": "right",
+                "dx": -8,
+                "dy": -8,
+                "baseline": "middle",
+                "fontStyle": "italic"
+              },
+              "encoding": {"text": {"field": "text_annotation"}}
+        }
+      ]  
+    }
+  ],
+  "config": {}
+}
