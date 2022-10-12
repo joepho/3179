@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":{"text": "Average CPI Scores by Region"},
+  "width": 400,
+  "height": 200,
+  "data":{
+    "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/CPI2020_AveragebyRegion.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x":{"field":"Region ", "type":"nominal"},
+    "y":{"field":"Average_CPI", "type":"quantitative"}
+  }
+}
