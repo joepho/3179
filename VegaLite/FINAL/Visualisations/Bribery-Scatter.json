@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A scatterplot showing body mass and flipper lengths of penguins.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Data/GCB_Bribery_Rates.csv"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "Bribery_Percentage",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    },
+    "y": {
+      "field": "CPI_Score",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    },
+    "color": {"field": "Species", "type": "nominal"},
+    "shape": {"field": "Species", "type": "nominal"}
+  },
+  "tooltip": [
+    {"field": "Country", "type": "nominal", "title": "Country"},
+    {"field": "CPI_Score", "type": "quantitative"},
+    {"field": "Bribery_Percentage", "type": "quantitative"}
+  ]
+}
