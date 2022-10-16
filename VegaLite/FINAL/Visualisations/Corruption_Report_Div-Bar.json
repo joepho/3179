@@ -43,7 +43,7 @@
     },
     "color": {
       "field": "Choice",
-      "scale": {"range": ["lightgreen", "lightcoral"]}
+      "scale": {"range": ["#32a152", "#ca2a29"]}
     }
   },
   "config": {"view": {"stroke": null}, "axis": {"grid": false}}
