@@ -17,10 +17,10 @@
     },
     {
       "name": "zoom_level",
-      "value": 150,
+      "value": 100,
       "bind": {
         "input": "range",
-        "min": 150,
+        "min": 100,
         "max": 1000,
         "step": 10,
         "name": "Zoom: "
