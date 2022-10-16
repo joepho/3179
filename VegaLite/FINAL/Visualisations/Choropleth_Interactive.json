@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Corruptions Perception Index Scores",
-  "width": "800",
+  "width": 800,
   "height": 400,
   "params": [
     {
@@ -17,10 +17,10 @@
     },
     {
       "name": "zoom_level",
-      "value": 100,
+      "value": 150,
       "bind": {
         "input": "range",
-        "min": 100,
+        "min": 150,
         "max": 1000,
         "step": 10,
         "name": "Zoom: "
@@ -32,14 +32,23 @@
       "bind": {
         "input": "select",
         "options": [
+          [0,0],
           [13.1, 20.8],
-          [80.0, 30.6],
+          [80, 30.6],
           [133.7, -25.3],
           [15.7, 50.5],
           [-100, 40],
           [-65, -20]
         ],
-        "labels": ["Africa", "Asia", "Australia", "Europe", "North America", "South America"],
+        "labels": [
+          "Select One",
+          "Africa",
+          "Asia",
+          "Australia",
+          "Europe",
+          "North America",
+          "South America"
+        ],
         "name": "Map Centre: "
       }
     }
@@ -90,12 +99,11 @@
         },
         {"filter": "datum.Year == Year_Selection"}
       ],
-      "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
       "encoding": {
         "shape": {"field": "geo", "type": "geojson"},
         "color": {
           "field": "CPI_Score",
-          "scale": {"domain": [0, 100], "scheme": "redblue"}, 
+          "scale": {"domain": [0, 100], "scheme": "redyellowgreen"},
           "type": "quantitative"
         },
         "tooltip": [
@@ -107,14 +115,17 @@
       "layer": [
         {"mark": {"type": "geoshape"}},
         {
-          "transform":[
+          "transform": [
+            {
+              "calculate": "datum.CPI_Score * 1", "as": "CPI_Score_adj" 
+            },
             {
               "window": [{"op": "rank", "as": "ranking"}],
-              "sort": [{"field": "CPI_Score", "order": "descending"}]
+              "sort": [{"field": "CPI_Score_adj", "order": "descending"}]
             },
-            {"filter":"datum.ranking==1"},
+            {"filter": "datum.ranking==1"},
             {
-              "calculate": "'The highest CPI score; for this period was '+ datum['CPI_Score']",
+              "calculate": "'The highest CPI score; for this period was '+ datum['CPI_Score_adj']",
               "as": "text_annotation_raw"
             },
             {
@@ -123,16 +134,16 @@
             }
           ],
           "mark": {
-                "type": "text",
-                "align": "right",
-                "dx": -8,
-                "dy": -8,
-                "baseline": "middle",
-                "fontStyle": "italic"
-              },
-              "encoding": {"text": {"field": "text_annotation"}}
+            "type": "text",
+            "align": "right",
+            "dx": -8,
+            "dy": -8,
+            "baseline": "middle",
+            "fontStyle": "italic"
+          },
+          "encoding": {"text": {"field": "text_annotation"}}
         }
-      ]  
+      ]
     }
   ],
   "config": {}
