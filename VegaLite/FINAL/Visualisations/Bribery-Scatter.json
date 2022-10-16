@@ -4,7 +4,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Data/GCB_Bribery_Rates.csv"
   },
-  "mark": "point",
+  "mark": {
+    "type": "circle"
+  },
   "encoding": {
     "x": {
       "field": "Bribery_Percentage",
@@ -16,12 +18,10 @@
       "type": "quantitative",
       "scale": {"zero": false}
     },
-    "color": {"field": "Species", "type": "nominal"},
-    "shape": {"field": "Species", "type": "nominal"}
-  },
-  "tooltip": [
+    "tooltip": [
     {"field": "Country", "type": "nominal", "title": "Country"},
-    {"field": "CPI_Score", "type": "quantitative"},
-    {"field": "Bribery_Percentage", "type": "quantitative"}
-  ]
+    {"field": "CPI_Score", "type": "quantitative", "title": "CPI Score"},
+    {"field": "Bribery_Percentage", "type": "quantitative", "title": "Bribery Rate by Total Population"}
+    ]
+  }
 }
