@@ -150,7 +150,7 @@
           "mark": {
             "type": "text",
             "align": "right",
-            "dx": -220,
+            "dx": -110,
             "dy": 70,
             "baseline": "middle",
             "fontStyle": "italic"
