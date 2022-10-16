@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Corruptions Perception Index Scores",
-  "width": 800,
+  "width": "container",
   "height": 400,
   "params": [
     {
