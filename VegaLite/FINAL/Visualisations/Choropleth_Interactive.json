@@ -32,7 +32,7 @@
       "bind": {
         "input": "select",
         "options": [
-          [0,0],
+          [0, 0],
           [13.1, 20.8],
           [80, 30.6],
           [133.7, -25.3],
@@ -128,12 +128,11 @@
         ]
       },
       "layer": [
-        {"mark": {"type": "geoshape"}},
+        {
+          "mark": {"type": "geoshape"}},
         {
           "transform": [
-            {
-              "calculate": "datum.CPI_Score * 1", "as": "CPI_Score_adj" 
-            },
+            {"calculate": "datum.CPI_Score * 1", "as": "CPI_Score_adj"},
             {
               "window": [{"op": "rank", "as": "ranking"}],
               "sort": [{"field": "CPI_Score_adj", "order": "descending"}]
@@ -151,8 +150,8 @@
           "mark": {
             "type": "text",
             "align": "right",
-            "dx": -8,
-            "dy": -8,
+            "dx": -220,
+            "dy": 70,
             "baseline": "middle",
             "fontStyle": "italic"
           },
