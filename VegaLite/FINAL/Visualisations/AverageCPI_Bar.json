@@ -9,6 +9,9 @@
   "mark": "bar",
   "encoding": {
     "x":{"field":"Region", "type":"nominal"},
-    "y":{"field":"Average_CPI", "type":"quantitative"}
+    "y":{"field":"Average_CPI", "type":"quantitative"},
+    "color":{
+      "field":"Region"
+    }
   }
 }
