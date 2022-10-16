@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Proportion of Population likely to report Corruption",
+  "params" : [
+    {
+      "name" : "Region_Filter",
+      "bind" : {
+        "input": "select",
+        "options" : [
+          null,
+          "AME",
+          "AP",
+          "ECA",
+          "MENA",
+          "SSA",
+          "WE/EU"
+        ],
+        "labels": [
+          "All",
+          "Americas",
+          "Asia Pacific",
+          "Europe and Central Asia",
+          "Middle East and North Africa",
+          "Sub Saharan Africa",
+          "Western Europe and European Union"
+        ]
+      }
+    }
+  ],
+  "data": { 
+    "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Data/GCB_Report_Rates.csv"
+    },
+  "transform": [
+    {"filter": "Region_Filter == null || datum.Region == Region_Filter"},
+    {"calculate": "datum.Agree == 2 ? '.Disagree' : 'Agree'", "as": "Choice"},
+    {"calculate": "datum.Agree == 2 ? -datum.Value : datum.Value", "as": "Value"}
+  ],
+  "width": 400,
+  "height": 350,
+  "mark": {"type":"bar", "tooltip": true},
+  "encoding": {
+    "y": {
+      "field": "Country",
+      "axis": null,
+      "stack":"center"
+      },
+    "x": {
+      "aggregate": "sum", "field": "Value",
+      "title": "Value",
+      "scale":{"domain":[-1,1]}
+    },
+    "color": {
+      "field": "Choice",
+      "scale": {"range": ["#675193", "#ca8861"]},
+      "legend": {"orient": "top", "title": null}
+    },
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}
