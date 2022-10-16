@@ -103,6 +103,7 @@
         "shape": {"field": "geo", "type": "geojson"},
         "color": {
           "field": "CPI_Score",
+          "title": "CPI Score",
           "scale": {"domain": [0, 100], "scheme": "redyellowgreen"},
           "type": "quantitative"
         },
