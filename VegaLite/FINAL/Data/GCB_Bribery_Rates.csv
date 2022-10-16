@@ -1,0 +1,103 @@
+﻿Country,Bribery_Percentage,CPI_Score,Region
+Albania,0.25,36,ECA
+Algeria,0.12,36,MENA
+Argentina,0.13,42,AME
+Armenia,0.19,49,ECA
+Australia,0.03,77,AP
+Azerbaijan,0.15,30,ECA
+Belarus,0.15,47,ECA
+Benin,0.19,41,SSA
+Bolivia,0.23,31,AME
+Botswana,0.01,60,SSA
+Brazil,0.09,38,AME
+Bulgaria,0.12,44,WE/EU
+Burkina Faso,0.09,40,SSA
+Burundi,0.11,19,SSA
+Cambodia,0.37,21,AP
+Cameroon,0.41,25,SSA
+Chile,0.18,67,AME
+China,0.21,42,AP
+Colombia,0.25,39,AME
+Costa Rica,0.21,57,AME
+Cote d'Ivoire,0.22,36,SSA
+Croatia,0.07,47,WE/EU
+Cyprus,0.02,57,WE/EU
+Dominican Republic*,0.46,28,AME
+Ecuador,0.24,39,AME
+Egypt,0.41,33,MENA
+El Salvador,0.23,36,AME
+Estonia,0.05,75,WE/EU
+Gabon,0.29,30,SSA
+Georgia,0.04,56,ECA
+Germany,0.02,80,WE/EU
+Ghana,0.21,43,SSA
+Greece,0.07,50,WE/EU
+Guatemala,0.2,25,AME
+Guinea,0.24,28,SSA
+Honduras,0.26,24,AME
+Hong Kong,0.01,77,AP
+Hungary,0.16,44,WE/EU
+India,0.63,40,AP
+Indonesia,0.24,37,AP
+Italy,0.05,53,WE/EU
+Jamaica,0.15,44,AME
+Japan,0,74,AP
+Jordan,0.03,49,MENA
+Kazakhstan,0.17,38,ECA
+Kenya,0.33,31,SSA
+Kosovo,0.08,36,ECA
+Latvia,0.14,57,WE/EU
+Lebanon,0.13,25,MENA
+Lesotho,0.04,41,SSA
+Liberia,0.57,28,SSA
+Lithuania,0.22,60,WE/EU
+Madagascar,0.11,25,SSA
+Malawi,0.12,30,SSA
+Malaysia*,0.23,51,AP
+Mali,0.14,30,SSA
+Mauritius,0.01,53,SSA
+Mexico,0.44,31,AME
+Moldova,0.22,34,ECA
+Mongolia,0.13,35,AP
+Montenegro,0.1,45,ECA
+Morocco,0.44,40,MENA
+Mozambique,0.28,25,SSA
+Myanmar,0.32,28,AP
+Namibia,0.06,51,SSA
+Nicaragua,0.24,22,AME
+Niger,0.07,32,SSA
+Nigeria,0.35,25,SSA
+Pakistan,0.25,31,AP
+Panama,0.32,35,AME
+Paraguay,0.18,28,AME
+Peru,0.3,38,AME
+Poland,0.06,56,WE/EU
+Portugal,0.02,61,WE/EU
+Romania,0.17,44,WE/EU
+Russia,0.27,30,ECA
+Sao Tome and Principe,0.19,47,SSA
+Senegal,0.06,45,SSA
+Serbia,0.15,38,ECA
+Sierra Leone,0.29,33,SSA
+Slovenia,0.02,60,WE/EU
+South Africa,0.05,44,SSA
+Spain,0.02,62,WE/EU
+Sri Lanka,0.1,38,AP
+Sudan,0.4,16,SSA
+Taiwan,0.05,65,AP
+Tajikistan,0.29,25,ECA
+Tanzania,0.2,38,SSA
+Thailand,0.33,36,AP
+Togo,0.17,29,SSA
+Trinidad and Tobago,0.04,40,AME
+Tunisia,0.08,44,MENA
+Turkey,0.08,40,ECA
+Uganda,0.35,27,SSA
+Ukraine,0.23,33,ECA
+Uruguay,0.19,71,AME
+Uzbekistan,0.13,26,ECA
+Venezuela,0.23,15,AME
+Vietnam,0.61,36,AP
+Yemen,0.36,15,MENA
+Zambia,0.13,33,SSA
+Zimbabwe,0.17,24,SSA
