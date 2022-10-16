@@ -53,7 +53,7 @@
       "field": "Choice",
       "scale": {"range": ["#675193", "#ca8861"]},
       "legend": {"orient": "top", "title": null}
-    },
+    }
   },
   "config": {
     "view": {"stroke": null},
