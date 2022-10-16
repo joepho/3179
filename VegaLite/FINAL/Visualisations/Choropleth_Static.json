@@ -47,7 +47,8 @@
     "color": {
       "field": "Rank 2020",
       "type": "quantitative",
-      "scale": {"type": "linear"}
+      "scale": {"type": "linear", "scheme":"redyellowgreen"},
+      "sort": "descending"
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
