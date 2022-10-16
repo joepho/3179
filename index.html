@@ -12,6 +12,11 @@
   integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+   <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/Homework1/styles.css" media="all">
   
@@ -21,6 +26,7 @@
 
   <div class="page">
     
+    <!-- HEADING -->
     <div class="pure-g">
       <div class="pure-u-1-1">
         <h1>Corruption Across the Globe</h1>
@@ -28,6 +34,7 @@
       </div>
     </div>
 
+    <!-- STATIC CHOROPLETH -->
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div class="description description-left">
@@ -41,25 +48,49 @@
       </div>
     </div>
     
+    <!-- INTERACTIVE CHOROPLETH -->
     <div class="pure-g">
         <div class="pure-u-1-2">
           <div id="choropleth-interactive" class="vis-container"></div>
         </div>
         <div class="pure-u-1-2">
-          <div id="bribery-bar" class="vis-container"></div>
+          <div id="cpi-bar" class="vis-container"></div>
         </div>
       </div>
     
+    <!-- BRIBERY HEADING -->
     <div class="pure-g">
-      <div class="pure-u-1-2">
+      <div class="pure-u-1-1">
         <div class="description description-left">
           <h2>Metric 1 - Bribery</h2>
           <p>One of the metrics utilised by the CPI index is bribery.</p>
         </div>
       </div>
-      <div class="pure-u-1-2">
+    </div>
+    
+    <!-- BRIBERY SCATTER -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="bribery-scatter" class="vis-container"></div>
       </div>
     </div>
+    
+    <!-- REPORT HEADING -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description description-left">
+          <h2>Metric 2 - Reporting Likelihood</h2>
+          <p>another metric that may influence the CPI of a country is how likely its residents are to report corruption as they see it.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- REPORT-DIVBAR -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="report-divbar" class="vis-container"></div>
+      </div>
+    </div>    
     
    </div> 
  
@@ -67,6 +98,8 @@
     var vg_1 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/Choropleth_Static.json";
     var vg_2 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/Choropleth_Interactive.json";
     var vg_3 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/AverageCPI_Bar.json";
+    var vg_4 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/Bribery-Scatter.json";
+    var vg_5 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/Corruption_Report_Div-Bar.json";
 
     vegaEmbed("#choropleth", vg_1) .then(function(result) {
         // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
@@ -76,7 +109,15 @@
         // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
     }).catch(console.error);
 
-    vegaEmbed("#bribery-bar", vg_3) .then(function(result) {
+    vegaEmbed("#cpi-bar", vg_3) .then(function(result) {
+        // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
+    }).catch(console.error);
+    
+    vegaEmbed("bribery-scatter", vg_4) .then(function(result) {
+        // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
+    }).catch(console.error);
+    
+    vegaEmbed("#report-divbar", vg_5) .then(function(result) {
         // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
     }).catch(console.error);
   </script>
