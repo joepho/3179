@@ -6,7 +6,7 @@
       },
       "mark": {
         "type": "circle",
-        "size": 40,
+        "size": 40
       },
       "encoding": {
         "x": {
