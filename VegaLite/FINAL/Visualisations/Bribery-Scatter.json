@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 580,
+  "width": 550,
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Data/GCB_Bribery_Rates.csv"
@@ -12,12 +12,14 @@
       "encoding": {
       "x": {
         "field": "Bribery_Percentage",
-        "type": "quantitative"
+        "type": "quantitative",
+        "title":"Bribery Rate by Population"
       },
       "y": {
         "field": "CPI_Score",
         "type": "quantitative",
-        "scale": {"domain":[0,100]}
+        "scale": {"domain":[0,100]},
+        "title": "CPI Score (2020)"
       },
       "color": {"field": "Region"},
       "tooltip": [
@@ -35,7 +37,7 @@
       "mark": {
         "type": "text", 
         "text": "India",
-        "dx": 271,
+        "dx": 257,
         "dy": 20
       },
       "encoding": {"color": {"value": "black"}}
@@ -44,7 +46,7 @@
       "mark": {
         "type": "text", 
         "text": "Germany",
-        "dx": -270,
+        "dx": -260,
         "dy": -101
       },
       "encoding": {"color": {"value": "black"}}
@@ -53,7 +55,7 @@
       "mark": {
         "type": "text", 
         "text": "Venezuela",
-        "dx": -85,
+        "dx": -80,
         "dy": 117
       },
       "encoding": {"color": {"value": "black"}}
