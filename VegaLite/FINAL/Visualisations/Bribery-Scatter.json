@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
+  "width": 580,
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Data/GCB_Bribery_Rates.csv"
@@ -35,7 +35,7 @@
       "mark": {
         "type": "text", 
         "text": "India",
-        "dx": 305,
+        "dx": 271,
         "dy": 20
       },
       "encoding": {"color": {"value": "black"}}
@@ -44,7 +44,7 @@
       "mark": {
         "type": "text", 
         "text": "Germany",
-        "dx": -303,
+        "dx": -270,
         "dy": -101
       },
       "encoding": {"color": {"value": "black"}}
@@ -53,7 +53,7 @@
       "mark": {
         "type": "text", 
         "text": "Venezuela",
-        "dx": -95,
+        "dx": -85,
         "dy": 117
       },
       "encoding": {"color": {"value": "black"}}
@@ -62,7 +62,7 @@
       "mark": {
         "type": "text", 
         "text": "Yemen",
-        "dx": 35,
+        "dx": 31,
         "dy": 117
       },
       "encoding": {"color": {"value": "black"}}
