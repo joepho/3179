@@ -9,7 +9,7 @@
   "encoding": {
     "x": {
       "field": "Bribery_Percentage",
-      "type": "quantitative",
+      "type": "quantitative"
     },
     "y": {
       "field": "CPI_Score",
