@@ -128,8 +128,7 @@
         ]
       },
       "layer": [
-        {
-          "mark": {"type": "geoshape"}},
+        {"mark": {"type": "geoshape"}},
         {
           "transform": [
             {"calculate": "datum.CPI_Score * 1", "as": "CPI_Score_adj"},
@@ -139,7 +138,7 @@
             },
             {"filter": "datum.ranking==1"},
             {
-              "calculate": "'The highest CPI score; for this period was '+ datum['CPI_Score_adj']",
+              "calculate": "datum['Country'] + ' had the; highest CPI Score; for this period - '+ datum['CPI_Score_adj']",
               "as": "text_annotation_raw"
             },
             {
