@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Population Proportion Likely to Report Corruption (negative values are unlikely to report)",
+  "width":"container",
+  "height":300,
   "params": [
     {
       "name": "Region_Filter",
