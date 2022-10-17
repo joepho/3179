@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 650,
+  "width": 600,
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Data/GCB_Bribery_Rates.csv"
