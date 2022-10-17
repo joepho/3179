@@ -3,7 +3,6 @@
   "title": "Corruption Perception Index (2020)",
   "width": "container",
   "height": 300,
-  "padding":10,
   "projection": {"type": "equalEarth"},
   "layer": [
     {
