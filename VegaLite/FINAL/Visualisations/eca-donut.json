@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":"Europe and Central Asia",
+  "data": {
+    "values": [
+      {"category": "Likely", "value": 0.36},
+      {"category": "Unlikely", "value": 0.64},
+    ]
+  },
+  "layer":[
+    {
+      "mark": {"type": "arc", "innerRadius": 55},
+      "encoding": {
+        "theta": {"field": "value", "type": "quantitative"},
+        "color": {"field": "category", "scale": {"range": ["#e55756", "#ee9191"]}},
+        "tooltip":[
+          {"field":"value","type":"quantitative","title":"Proportion"},
+          {"field":"category", "type": "nominal","title":"Likelihood to Report"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "text": "0.36", "fontSize": 40},
+      "encoding": {"color": {"value": "black"}}
+    }
+  ]
+}
