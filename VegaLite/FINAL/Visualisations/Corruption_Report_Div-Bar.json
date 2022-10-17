@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Population Proportion Likely to Report Corruption (negative values are unlikely to report)",
-  "width":"container",
-  "height":300,
+  "width": 400,
+  "height": 350,
   "params": [
     {
       "name": "Region_Filter",
@@ -30,10 +30,7 @@
     },
     {"calculate": "datum.Agree == 2 ? 'Unlikely' : 'Likely'", "as": "Choice"},
     {"filter": "Region_Filter == null || datum.Region == Region_Filter"}
-
   ],
-  "width": 400,
-  "height": 350,
   "mark": {"type": "bar", "tooltip": true},
   "encoding": {
     "y": {"field": "Country", "axis": null, "stack": "center"},
@@ -43,7 +40,7 @@
       "title": "Value",
       "scale": {"domain": [-1, 1]}
     },
-    "color": {"field": "Choice", "scale": {"range": ["#8ed067", "#dd4a3"]}}
+    "color": {"field": "Choice", "scale": {"range": ["#8ed067", "#dd3830"]}}
   },
   "config": {"view": {"stroke": null}, "axis": {"grid": false}}
 }
