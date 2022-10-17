@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title":"Middle East and North Africa",
+  "title":"Middle East/North Africa",
   "width":"container",
   "data": {
     "values": [
