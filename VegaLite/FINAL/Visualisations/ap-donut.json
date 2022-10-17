@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":"Asia Pacific",
+  "data": {
+    "values": [
+      {"category": "Likely", "value": 0.68},
+      {"category": "Unlikely", "value": 0.32},
+    ]
+  },
+  "layer":[
+    {
+      "mark": {"type": "arc", "innerRadius": 55},
+      "encoding": {
+        "theta": {"field": "value", "type": "quantitative"},
+        "color": {"field": "category", "scale": {"range": ["#f58519", "#fabd85"]}},
+        "tooltip":[
+          {"field":"value","type":"quantitative","title":"Proportion"},
+          {"field":"category", "type": "nominal","title":"Likelihood to Report"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "text": "0.68", "fontSize": 40},
+      "encoding": {"color": {"value": "black"}}
+    }
+  ]
+}
