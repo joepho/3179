@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title":"Population Proportion Likely to Report Corruption (negative values are unlikely to report)",
+  "title": "Population Proportion Likely to Report Corruption (negative values are unlikely to report)",
   "params": [
     {
       "name": "Region_Filter",
@@ -22,12 +22,13 @@
     "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Data/GCB_Report_Rates.csv"
   },
   "transform": [
-    {"filter": "Region_Filter == null || datum.Region == Region_Filter"},
-    {"calculate": "datum.Agree == 2 ? 'Unlikely' : 'Likely'", "as": "Choice"},
     {
       "calculate": "datum.Agree == 2 ? -datum.Value : datum.Value",
       "as": "Value"
-    }
+    },
+    {"calculate": "datum.Agree == 2 ? 'Unlikely' : 'Likely'", "as": "Choice"},
+    {"filter": "Region_Filter == null || datum.Region == Region_Filter"}
+
   ],
   "width": 400,
   "height": 350,
@@ -40,10 +41,7 @@
       "title": "Value",
       "scale": {"domain": [-1, 1]}
     },
-    "color": {
-      "field": "Choice",
-      "scale": {"range": ["#32a152", "#ca2a29"]}
-    }
+    "color": {"field": "Choice", "scale": {"range": ["#32a152", "#ca2a29"]}}
   },
   "config": {"view": {"stroke": null}, "axis": {"grid": false}}
 }
