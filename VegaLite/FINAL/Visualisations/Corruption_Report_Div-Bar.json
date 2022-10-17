@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Population Proportion Likely to Report Corruption",
-  "width": 400,
+  "width": "container",
   "height": 350,
   "params": [
     {
