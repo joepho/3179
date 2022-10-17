@@ -22,7 +22,11 @@
     },
     {
       "mark": {"type": "text", "text": "0.61", "fontSize": 40},
+      "encoding": {"color": {"value": "black"}},
+    {
+      "mark": {"type": "text", "text": "CPI : 65.8", "dy":25},
       "encoding": {"color": {"value": "black"}}
+    }
     }
   ]
 }
