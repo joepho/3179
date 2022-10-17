@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":"Bribery Rate by Total Population V CPI Score (2020)",
   "width": 550,
   "height": 300,
   "data": {
