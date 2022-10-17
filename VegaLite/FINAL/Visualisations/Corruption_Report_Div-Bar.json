@@ -6,14 +6,13 @@
       "name": "Region_Filter",
       "bind": {
         "input": "select",
-        "options": [null, "AME", "AP", "ECA", "MENA", "SSA", "WE/EU"],
+        "options": [null, "AME", "AP", "ECA", "MENA", "WE/EU"],
         "labels": [
           "All",
           "Americas",
           "Asia Pacific",
           "Europe and Central Asia",
           "Middle East and North Africa",
-          "Sub Saharan Africa",
           "Western Europe and European Union"
         ]
       }
