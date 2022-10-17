@@ -43,7 +43,7 @@
       "title": "Value",
       "scale": {"domain": [-1, 1]}
     },
-    "color": {"field": "Choice", "scale": {"range": ["#8ed067", "##dd4a3"]}}
+    "color": {"field": "Choice", "scale": {"range": ["#8ed067", "#dd4a3"]}}
   },
   "config": {"view": {"stroke": null}, "axis": {"grid": false}}
 }
