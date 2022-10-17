@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title":"Western Europe and European Union",
+  "title":"Western Europe/European Union",
   "width":"container",
   "data": {
     "values": [
