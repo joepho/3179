@@ -138,7 +138,7 @@
             },
             {"filter": "datum.ranking==1"},
             {
-              "calculate": "datum['Country'] + ' had the; highest CPI Score; for this period - '+ datum['CPI_Score_adj']",
+              "calculate": "'The highest CPI score;for this period was '+ datum['CPI_Score_adj']",
               "as": "text_annotation_raw"
             },
             {
