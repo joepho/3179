@@ -10,7 +10,6 @@
     "x": {
       "field": "Bribery_Percentage",
       "type": "quantitative",
-      "scale": {"domain":[0,0.8]}
     },
     "y": {
       "field": "CPI_Score",
