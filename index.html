@@ -15,7 +15,7 @@
    <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
   
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="styles.css" media="all">
@@ -28,39 +28,60 @@
     
     <!-- HEADING -->
     <div class="pure-g">
-      <div class="pure-u-1-1">
+      <div class="pure-u-1-1 description-center center">
         <h1><span class="txt-redbold">Corruption</span> Across the Globe</h1>
-        <p>An analysis of various metrics used to perceive <span class="txt-redbold">corruption across the world.</span></p>
+        <p>An analysis of various metrics used to perceive 
+          <span class="txt-redbold">corruption across the world.</span></p>
         <p><span class="txt-faded">Joseph Phoparesut</span></p>
+      </div>
+    </div>
+
+    <!-- HEADING -->
+    <div class="pure-g">
+      <div class="pure-u-1-1 description-center center round">
+        <h2>CPI Rankings</h2>
       </div>
     </div>
 
     <!-- STATIC CHOROPLETH -->
     <div class="pure-g">
       <div class="pure-u-1-3">
-        <div class="description description-left">
-          <h2>CPI Rankings</h2>
-          <p>The Corruptions Perception Index (CPI) is a measurement index that evaluates the level of perceived corruption across the world. Based on a number 
-            of various metrics which are evaluated largely from surveys, a CPI score is assigned to each country. From that score a rank of the least to most corrupt 
-            countries in the world. </p>
+        <div class="description description-center">
+          <p>The <span class="bold">Corruption Perception Index (CPI)</span> is a measurement index that evaluates 
+            the level of <span class="bold">perceived</span> <span class="txt-redbold">corruption</span> across the world. Based on a number of various 
+            metrics which are evaluated largely from surveys, a CPI score is assigned to each 
+            country. From that score a rank of the <span class="txt-greenbold">least</span> to <span class="txt-redbold">most</span> corrupt countries in the world. </p>
         </div>
       </div>
       <div class="pure-u-2-3">
-        <div id="choropleth" class="vis-container"></div>
+        <div id="choropleth" class="vis-container vis-left" ></div>
       </div>
     </div>
 
     <!-- BRIBERY HEADING -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <div class="description description-center">
+        <div class="description description-center center round">
           <h2>Global CPI Scores</h2>
-          <p>One of the most immediately obvious patterms within the CPI is that scores show very little regional variation. Moreover, CPI scores do not tend
-          fluctuate over time by any significant amount.</p> 
         </div>
       </div>
     </div>
-    
+
+    <!-- BRIBERY DESC-->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description description-center center">
+          <p>One of the most immediately obvious patterns within the CPI is that scores show 
+            <span class="bold">very little regional variation</span> - countries located in the same geographic region
+            tend to have very similar CPI scores. (higher scores indicate less perceived corruption). </p>
+          <p>It may also be noted that CPI scores tend to show <span class="bold">little fluctuation</span> over smaller 
+            periods of time. This is largely because corruption perception is measured on the opinions 
+            of a country's people, which cannot be culturally altered in <span class="bold">short time
+              spans.</span></p> 
+        </div>
+      </div>
+    </div>
+
     <!-- INTERACTIVE CHOROPLETH -->
     <div class="pure-g">
       <div class="pure-u-2-3">
@@ -70,13 +91,91 @@
         <div id="cpi-bar" class="vis-container"></div>
       </div>
     </div> 
-    
-    <!-- BRIBERY HEADING -->
+
+    <!-- TIME DESCRIPTION -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <div class="subheading">
-          <h2>Metric 1 - Bribery</h2>
-          <p>One of the metrics utilised by the CPI index is bribery.</p>
+        <div class="description description-center center">
+
+        </div>
+      </div>
+    </div>
+
+
+      <!-- REPORT HEADING -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description description-center center round">
+            <h2>Metric 1 - Reporting Likelihood</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- REPORT DESC -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description description-center center">
+            <p>One of the metrics that may influence the CPI of a country is how likely its residents 
+              are to report corruption as they see it. <span class="bold">Intuitively</span></span>, it would seem that countries with
+              residents that are more likely to report corruption would have more accounts of corruption,
+              and therefore a <span class="txt-redbold">lower CPI score</span>.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- REPORT DONUTS -->
+      <h3 class="description-center">Likelihood to Report <span class="txt-redbold">Corruption</span> by Region</h3>
+      <div class="pure-g">
+        <div class="pure-u-1-5">
+          <div id="ame-donut" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-5">
+          <div id="ap-donut" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-5">
+          <div id="eca-donut" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-5">
+          <div id="mena-donut" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-5">
+          <div id="weeu-donut" class="vis-container"></div>
+        </div>
+      </div>
+  
+      <!-- REPORT DIVBAR -->
+      <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-center">
+            <p>Here, we examine the <span class="bold">likelihood of a certain country's residents to report
+              corruption against its CPI (2020)</span> score to determine any correlation between the two
+              metrics.</p>
+            <p>Contrary to the intuitive hypothesis, it would appear that the likelihood of report has
+              <span class="bold">little correlation</span> with the CPI of a given country. </p>
+            <p>This is apparent with MENA possessing
+              a higher likelihood and a low CPI score (which is intuitively in line), contrasting against
+              ECA with almost half the likelihood, but a <span class="txt-redbold">lower CPI score</span>.</p>
+          </div>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="report-divbar" class="vis-container" ></div>
+        </div>
+      </div>  
+    
+      <!-- REPORT HEADING -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description description-center center round">
+            <h2>Metric 2 - Bribery</h2>
+          </div>
+        </div>
+      </div>
+
+    <!-- BRIBERY DESC -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description description-center center">
+          <p>Another metric considered when calculating a CPI score for any given country is the <span class="txt-redbold">prevalence of bribery</span>.</p>
         </div>
       </div>
     </div>
@@ -86,28 +185,22 @@
       <div class="pure-u-2-3">
         <div id="bribery-scatter" class="vis-container"></div>
       </div>
-      <div>
-        <p>kjsdbakjhsdakshdkjasd</p>
+      <div class="pure-u-1-3 description-center">
+        <p>The following scatter plot allows us to visualise the correlation between <span class="bold">bribery rates and
+          CPI score</span>. The data shows that generally countries with lower rates of bribery possess higher 
+          CPI scores in comparison to those with lower CPI scores.
+        </p>
+        <p>It can be concluded from this data that the prevalence of bribery within a country <span class="bold">definitively
+          has an influence </span> on its CPI rating, however the presence of existing outliers indicate the
+          influence of the other parameters used to calculate the CPI.
+        </p>
       </div>
     </div>
     
-    <!-- REPORT HEADING -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <div class="description description-left">
-          <h2>Metric 2 - Reporting Likelihood</h2>
-          <p>another metric that may influence the CPI of a country is how likely its residents are to report corruption as they see it.</p>
-        </div>
-      </div>
+    <div>
+      <p>data sourced from transparency.org</p>
     </div>
-    
-    <!-- REPORT-DIVBAR -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <div id="report-divbar" class="vis-container"></div>
-      </div>
-    </div>    
-    
+
    </div> 
  
   <script type="text/javascript">
@@ -116,24 +209,49 @@
     var vg_3 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/AverageCPI_Bar.json";
     var vg_4 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/Bribery-Scatter.json";
     var vg_5 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/Corruption_Report_Div-Bar.json";
-
-    vegaEmbed("#choropleth", vg_1) .then(function(result) {
+    var vg_6 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/ame-donut.json";
+    var vg_7 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/ap-donut.json";
+    var vg_8 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/eca-donut.json";
+    var vg_9 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/mena-donut.json";
+    var vg_10 = "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Visualisations/weeu-donut.json";
+    
+    vegaEmbed("#choropleth", vg_1, {"actions":false}) .then(function(result) {
         // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
     }).catch(console.error);
 
-    vegaEmbed("#choropleth-interactive", vg_2) .then(function(result) {
+    vegaEmbed("#choropleth-interactive", vg_2, {"actions":false}) .then(function(result) {
         // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
     }).catch(console.error);
 
-    vegaEmbed("#cpi-bar", vg_3) .then(function(result) {
+    vegaEmbed("#cpi-bar", vg_3, {"actions":false}) .then(function(result) {
         // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
     }).catch(console.error);
     
-    vegaEmbed("#bribery-scatter", vg_4) .then(function(result) {
+    vegaEmbed("#bribery-scatter", vg_4, {"actions":false}) .then(function(result) {
         // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
     }).catch(console.error);
     
-    vegaEmbed("#report-divbar", vg_5) .then(function(result) {
+    vegaEmbed("#report-divbar", vg_5, {"actions":false}) .then(function(result) {
+        // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#ame-donut", vg_6, {"actions":false}) .then(function(result) {
+        // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#ap-donut", vg_7, {"actions":false}) .then(function(result) {
+        // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#eca-donut", vg_8, {"actions":false}) .then(function(result) {
+        // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#mena-donut", vg_9, {"actions":false}) .then(function(result) {
+        // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#weeu-donut", vg_10, {"actions":false}) .then(function(result) {
         // Access the Vega view instance (https://vega.github/io/vega/docs/api/view) as result.view
     }).catch(console.error);
 
