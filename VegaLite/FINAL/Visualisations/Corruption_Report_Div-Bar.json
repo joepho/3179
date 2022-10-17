@@ -5,7 +5,7 @@
   "height": 350,
   "params": [
     {
-      "name": "Region_Filter",
+      "name": "Filter",
       "bind": {
         "input": "select",
         "options": [null, "AME", "AP", "ECA", "MENA", "WE/EU"],
@@ -29,7 +29,7 @@
       "as": "Value"
     },
     {"calculate": "datum.Agree == 2 ? 'Unlikely' : 'Likely'", "as": "Choice"},
-    {"filter": "Region_Filter == null || datum.Region == Region_Filter"}
+    {"filter": "Filter == null || datum.Region == Filter"}
   ],
   "mark": {"type": "bar", "tooltip": true},
   "encoding": {
