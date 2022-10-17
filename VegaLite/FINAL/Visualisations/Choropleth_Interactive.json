@@ -3,7 +3,6 @@
   "title": "Corruptions Perception Index Scores",
   "width": "container",
   "height": 300,
-  "padding":10
   "params": [
     {
       "name": "Year_Selection",
