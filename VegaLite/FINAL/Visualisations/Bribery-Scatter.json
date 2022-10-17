@@ -5,26 +5,68 @@
   "data": {
     "url": "https://raw.githubusercontent.com/jpho0002/3179/main/VegaLite/FINAL/Data/GCB_Bribery_Rates.csv"
   },
-  "mark": {"type": "circle", "size": 40},
-  "encoding": {
-    "x": {
-      "field": "Bribery_Percentage",
-      "type": "quantitative"
-    },
-    "y": {
-      "field": "CPI_Score",
-      "type": "quantitative",
-      "scale": {"domain":[0,100]}
-    },
-    "color": {"field": "Region"},
-    "tooltip": [
-      {"field": "Country", "type": "nominal", "title": "Country"},
-      {"field": "CPI_Score", "type": "quantitative", "title": "CPI Score"},
-      {
+  "layer":[
+    {
+
+      "mark": {"type": "circle", "size": 40},
+      "encoding": {
+      "x": {
         "field": "Bribery_Percentage",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "CPI_Score",
         "type": "quantitative",
-        "title": "Bribery Rate by Total Population"
+        "scale": {"domain":[0,100]}
+      },
+      "color": {"field": "Region"},
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "CPI_Score", "type": "quantitative", "title": "CPI Score"},
+        {
+          "field": "Bribery_Percentage",
+          "type": "quantitative",
+          "title": "Bribery Rate by Total Population"
+        }
+      ]
       }
-    ]
-  }
+    },
+    {
+      "mark": {
+        "type": "text", 
+        "text": "India",
+        "dx": 179,
+        "dy": 20
+      },
+      "encoding": {"color": {"value": "black"}}
+    },
+    {
+      "mark": {
+        "type": "text", 
+        "text": "Germany",
+        "dx": -179,
+        "dy": -101
+      },
+      "encoding": {"color": {"value": "black"}}
+    },
+    {
+      "mark": {
+        "type": "text", 
+        "text": "Venezuela",
+        "dx": -55,
+        "dy": 117
+      },
+      "encoding": {"color": {"value": "black"}}
+    },
+    {
+      "mark": {
+        "type": "text", 
+        "text": "Yemen",
+        "dx": 21,
+        "dy": 117
+      },
+      "encoding": {"color": {"value": "black"}}
+    }
+  ]
+
 }
