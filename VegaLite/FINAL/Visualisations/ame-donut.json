@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title":"Americas",
-  "witdh":"container",
+  "width":"container",
   "data": {
     "values": [
       {"category": "Likely", "value": 0.66},
